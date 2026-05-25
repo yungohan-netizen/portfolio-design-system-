@@ -4,14 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Halo Studio — A studio for cinematic dark-mode interfaces.</title>
-  <link rel="stylesheet" href="colors_and_type.css">
+  <link rel="stylesheet" href="../../colors_and_type.css">
   <link rel="stylesheet" href="site.css">
   <link rel="stylesheet" href="portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap">
   <style>
-    @font-face {
-      font-family: 'Cas Calisaya';
-      src: url('fonts/Cas-Calisaya.otf') format('opentype');
-      font-display: swap;
+    /* Halo Site — display-font override.
+       Swap Cas Calisaya for Kanit at the site level only; the global
+       tokens in colors_and_type.css stay untouched so the dashboard
+       and other surfaces are unaffected. */
+    :root {
+      --font-display: 'Kanit', 'Geist', 'Inter', system-ui, sans-serif;
+      --font-decor:   'Kanit', 'Geist', sans-serif;
+    }
+    /* Re-tune for Kanit's metrics (wider, less stylized than Cas Calisaya). */
+    .hero-title,
+    .section-h2,
+    .p-hero-title,
+    .work-title,
+    .p-footer-mega,
+    .stat-n,
+    .phi-t,
+    .cap-card h3,
+    .feature-card h3,
+    .process-card h3 {
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+    .halo-logo-name,
+    .ps-greet,
+    .footer-logo,
+    .contact-loc-v,
+    .price-amount .amt,
+    .logos-row .brand,
+    .p-marquee-row,
+    .award-t {
+      font-weight: 500;
+      letter-spacing: -0.02em;
     }
   </style>
 </head>
